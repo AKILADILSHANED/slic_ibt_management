@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Display Option Details";
+
+}
+@model UpdateTransferOptionDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Option Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="ConfirmUpdateOption">
+            <h4>Option Details: Option Details for provided Option ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Option ID</th>
+                        <th>Option Type</th>
+                        <th>Option Name</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Created Date</th>
+                        <th>Created By</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input asp-for="@Model.OptionID" value="@Model.OptionID" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.OptionType" value="@Model.OptionType" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.OptionName" value="@Model.OptionName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        </td>
+                        
+                        <td>
+                            <input asp-for="@Model.OptionDescription" value="@Model.OptionDescription" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.Priority" value="@Model.Priority" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.CreatedDate" value="@Model.CreatedDate" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.CreatedBy" value="@Model.CreatedBy" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+                        </td>
+
+                        <td>
+                            <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="UpdateTransferOption">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

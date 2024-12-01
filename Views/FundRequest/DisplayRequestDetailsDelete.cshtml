@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Display Request Details";
+
+}
+@model FundRequestDetailsDeleteDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Fund Request Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="FundRequest" asp-action="SaveDeleteFundRequest">
+            <h4>Fund Request Details: Fund Request Details for provided Request ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Request Date</th>
+                        <th>Required Date</th>
+                        <th>Request Amount</th>
+                        <th>Remaining Request</th>
+                        <th>Approval Status</th>
+                        <th>Approved By</th>
+                        <th>Requested By</th>
+                        <th>Reason</th>
+                        <th>Account Number</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.RequestID</td>
+                        <td>@Model.RequestDate.ToString("d")</td>
+                        <td>@Model.RequiredDate.ToString("d")</td>
+                        <td>@Model.RequestAmount.ToString("N")</td>
+                        <td>@Model.RemainingRequestAmount.ToString("N")</td>
+                        <td>@Model.IsApproved</td>
+                        <td>@Model.ApprovedBy</td>
+                        <td>@Model.RequestBy</td>
+                        <td>@Model.RequestReason</td>
+                        <td>@Model.AccountNumber</td>
+                        <td>
+                            <button type="submit" class="btn btn-danger btn-sm"> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <input asp-for="RequestID" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RequestDate" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RequiredDate" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RequestAmount" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RemainingRequestAmount" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="IsApproved" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="ApprovedBy" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RequestBy" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="RequestReason" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <input asp-for="AccountNumber" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+
+            <br />
+            
+            <a asp-controller="FundRequest" asp-action="DeleteRequest">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SLICGL_IBT_Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SLICGL_IBT_Management.styles.css" asp-append-version="true" />
+    
+
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;" data-bs-theme="light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="" asp-action="">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Manage Users
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="UserDetailsForRegister">Register</a></li>
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="SearchUser">Search User</a></li>
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="DeleteUser">Delete User</a></li>
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="UpdateUser">Update User Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="DisplayAllUsers">Display All</a></li>
+                                
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Accounts
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="BankAccount" asp-action="AccountDetailsForRegister">Register</a></li>
+                                <li><a class="dropdown-item" asp-controller="BankAccount" asp-action="SearchAccount">Search Account</a></li>
+                                <li><a class="dropdown-item" asp-controller="BankAccount" asp-action="DeleteAccount">Delete Account</a></li>
+                                <li><a class="dropdown-item" asp-controller="BankAccount" asp-action="UpdateAccount">Update Account Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="BankAccount" asp-action="DisplayAllAccounts">Display All</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Balances
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="Balance" asp-action="BalanceEnter">Enter Balance</a></li>
+                                <li><a class="dropdown-item" asp-controller="Balance" asp-action="EditBalance">Edit Balance</a></li>
+                                <li><a class="dropdown-item" asp-controller="Balance" asp-action="DeleteBalance">Delete Balance</a></li>
+                                <li><a class="dropdown-item" asp-controller="Balance" asp-action="DisplayBalances">Balance List</a></li>
+                                <li><a class="dropdown-item" asp-controller="Balance" asp-action="BalanceAdjustments">Balance Adjustments</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Payments
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="Payment" asp-action="NewPayment">New Payment</a></li>
+                                <li><a class="dropdown-item" asp-controller="Payment" asp-action="UpdatePayment">Update Payment</a></li>
+                                <li><a class="dropdown-item" asp-controller="Payment" asp-action="DeletePayment">Delete Payment</a></li>
+                                <li><a class="dropdown-item" asp-controller="Payment" asp-action="DisplayAllPayment">Payment List</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fund Request
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="NewRequest">New Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="NewForecastRequest">Future Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="SearchRequest">Search Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="UpdateRequest">Update Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="DeleteRequest">Delete Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="DisplayAllRequests">Display Request</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="AdjustmentDetails">Request Adjustment Details</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Transfers 
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" >Manual Transfer</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="AutomatedTransfers">Automated Transfer</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="TransfersDetails">Display Transfer Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="TransfersDetails">Edit Transfer Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="ReverseIndividualTransfer">Reverse Individual Transfer</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="ReverseBulkTransfer">Reverse Bulk Transfers</a></li>
+                                <li><a class="dropdown-item" asp-controller="IBTSheet" asp-action="GenerateIBTSheet">Generate IBT Sheet</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="NewTransferOption">Create Transfer Option</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="RemoveOption">Option Remove</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="UpdateTransferOption">Option Update</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="DisplayAllOptions">Display Options</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="SetOptionPriority">Set Priority for Options</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Manage Repos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="CreateNewRepo">Create New</a></li>
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="EditRepo">Edit Repo Data</a></li>
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="SearchRepo">Search Repo</a></li>
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="DeleteRepo">Delete Repo</a></li>
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="DisplayAllRepo">Display Repo Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="Repo" asp-action="RepoAdjustments">Display Repo Adjustment</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Forecast
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Print
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Admin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="ApproveRequests">Approve Fund Reuests</a></li>
+                                <li><a class="dropdown-item" asp-controller="FundRequest" asp-action="ApproveRequestsReverse">Reverse Approved Requests</a></li>
+                                
+                            </ul>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Settings
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="ConfigureTransferMethod">Configure Transfer Method</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="DeleteTransferMethod">Delete Transfer Method</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="ActiveTransferMethod">Activate Transfer Method</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="DeActiveTransferMethod">Deactivate Transfer Method</a></li>
+                                <li><a class="dropdown-item" asp-controller="Transfer" asp-action="DisplayAllTransferMethods">Display all Transfer Method</a></li>
+                            </ul>
+   
+                        </li>
+
+
+
+
+
+                        <li class="nav-item nav-logout">
+                            <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Log out
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   <!--<footer class="border-top footer text-muted footer-design">
+        <div class="container">
+            &copy; 2024 - SLICGL_IBT_Management - Designed by Akila Edirisooriya | All Right Reserved.
+        </div>
+    </footer>
+     -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

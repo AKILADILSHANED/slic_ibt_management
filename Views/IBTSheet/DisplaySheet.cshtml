@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Display Sheet";
+
+}
+@model IBTSheet
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>IBT Sheet Details</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>IBT Sheet details for the date @DateTime.Today.Date.ToString("yyyy-MM-dd")</h4>
+        <br />
+
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Sheet ID</th>
+                    <th>Sheet Date</th>
+                    <th>Created By</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <form method="post" asp-controller="Transfer" asp-action="InitiateTransfers">
+                <tr>
+                    <td>@Model.SheetID</td>
+                    <td>@Model.CreatedDate</td>
+                    <td>@Model.CreateBy</td>
+                    
+                </tr>
+                </form>
+            </tbody>
+
+        </table>
+        <br />
+
+    </div>
+
+
+
+</body>
+</html>

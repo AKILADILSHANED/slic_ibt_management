@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Delete Account Balance";
+
+}
+@model DeleteBalanceDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+
+    <div class="MainMessage">
+        <h4>Display Account Balance for delete</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Balance" asp-action="ConfirmDelete">
+            <h4>Balance Details for provided Balance ID.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Balance ID</label>
+            <input asp-for="@Model.BalanceID" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Balance Date</label>
+            <input asp-for="@Model.BalanceDate" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Bank</label>
+            <input asp-for="@Model.BankName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Account Number</label>
+            <input asp-for="@Model.AccountNumber" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        
+            <label for="inputPassword5" class="form-label">Balance</label>
+            <input asp-for="@Model.BalanceAmount" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <input type="hidden" value="@Model.IsDeleted"/>
+            
+            <br />
+            
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            
+
+            <a asp-controller="Balance" asp-action="DeleteBalance">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SLICGL_IBT_Management.props" />
+</Project>

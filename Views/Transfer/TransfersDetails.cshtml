@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Display Transfers";
+
+}
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display all Transfers</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="DisplayTransfers">
+            <h4>Please select Transfer Date to display</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Transfer Date</label>
+            <input name="TransferDate" class="form-control form-control-sm" type="date" aria-label=".form-control-sm example" required>
+
+            <br />
+            <button type="submit" class="btn btn-primary">View</button>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
+

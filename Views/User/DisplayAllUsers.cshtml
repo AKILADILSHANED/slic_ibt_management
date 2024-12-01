@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Display Users";
+
+}
+@model IEnumerable<DisplayAllUsersDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Users Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Users</h4>
+        <br />
+        <table class="table-content">
+                <thead>
+                    <tr>
+                    <th>User ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>EPF No</th>
+                    <th>Position</th>
+                    <th>Registered On</th>
+                    <th>Create By</th>
+                    <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var ObjectUser in Model)
+                {
+                    <tr>
+                        <td>@ObjectUser.User_Id</td>
+                        <td>@ObjectUser.FirstName</td>
+                        <td>@ObjectUser.LastName</td>
+                        <td>@ObjectUser.Email</td>
+                        <td>@ObjectUser.Epf</td>
+                        <td>@ObjectUser.Position</td>
+                        <td>@ObjectUser.Create_Date_Time.ToString("dd.MM.yyyy")</td>
+                        <td>@ObjectUser.Creator</td>
+                        
+                            @if (@ObjectUser.IsDeleted == 0)
+                            {
+                            <td>Active</td>
+                            }
+                            else
+                            {
+                            <td>Deleted</td>
+                            }
+                        
+                    </tr>
+                }
+                </tbody>
+
+        </table>
+        <br>
+               
+    </div>
+
+
+
+</body>
+</html>

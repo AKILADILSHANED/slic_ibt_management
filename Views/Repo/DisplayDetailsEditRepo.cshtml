@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Edit Repo";
+
+}
+@model DisplayDetailsEditRepo
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Edit Repo</h4>
+    </div>
+
+    <div class="main_form">
+
+
+        <form method="POST" asp-controller="Repo" asp-action="SaveRepoUpdatedDetails">
+            <h4>Please update Repo Details below.</h4>
+                       
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Repo ID</th>
+                        <th>Repo Type</th>
+                        <th>Account No</th>
+                        <th>Opening Balance</th>
+                        <th>Closing Balance</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <input asp-for="RepoID" type="text" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly/>
+                        </td>
+                    
+                                               
+                    
+                        <td>
+                        <select asp-for="@Model.RepoType" class="form-select form-select-sm" aria-label="Small select example">
+                            <option value="@Model.RepoType" selected> - Please select a Repo Type -</option>
+                            <option value="Excess Repo">Excess Repo</option>
+                            <option value="Investment Repo">Investment Repo</option>
+
+                        </select>
+                        </td>
+                    
+
+                    
+                        <td>
+                        <select asp-for="@Model.AccountID" class="form-select form-select-sm" aria-label="Small select example">
+                            <option value="@Model.AccountID" selected> - Please select a Repo Account -</option>
+                            @foreach (var BankAccount in Model.AccountList)
+                            {
+                                <option value="@BankAccount.Key">@BankAccount.Value</option>
+                            }
+
+                        </select>
+                        </td>
+                    
+                        <td>
+                            <input asp-for="@Model.OpeningBalance" value="@Model.OpeningBalance.ToString("N")" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+                        </td>
+                    
+                        <td>
+                            <input asp-for="@Model.ClosedBalance" value="@Model.ClosedBalance.ToString("N")" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+                        </td>
+                    
+                        <td>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        </td>
+                    </tr>
+
+                
+            </table>
+            <br />
+            <a asp-controller="Repo" asp-action="EditRepo">
+                <button type="button" class="btn btn-secondary">Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
+

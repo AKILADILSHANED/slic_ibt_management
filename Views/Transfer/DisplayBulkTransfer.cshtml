@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Reverse Transfer";
+
+}
+@model DisplayBulkTransfer;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Bulk Transfer Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="SaveDeleteBulkTransfer">
+            <h4>Transfer Details: Transfer Details for provided Sheet ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Total Records</th>
+                        <th>IBT Sheet No</th>
+                        <th>Total Transfer Amount</th>
+                        <th>Not-Deleted Count </th>
+                        <th>Deleted Count</th>
+                        <th>Not-Approved Count </th>
+                        <th>Approved Count</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.TotalCount</td>
+                        <td>@Model.IBTSheet</td>
+                        <td>@Model.TotalTransferAmount.ToString("N")</td>
+                        <td>@Model.NotDeletedCount</td>
+                        <td>@Model.DeletedCount</td>
+                        <td>@Model.NotApprovedCount</td>
+                        <td>@Model.ApprovedCount</td>
+
+                        <td>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <input name="SheetID" value="@Model.IBTSheet" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+            <input name="ApprovedRecords" value="@Model.ApprovedCount" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="ReverseBulkTransfer">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+
+}
+
+
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+
+@if (@TempData["message"] != null)
+{
+    <br />
+    <div class="MainMessage">
+        @TempData["message"]
+    </div>
+
+}
+
+
+<div class="footer">
+&copy; 2024 - SLICGL_IBT_Management - Designed by Akila Edirisooriya | All Right Reserved.
+</div>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

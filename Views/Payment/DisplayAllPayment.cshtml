@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Display Payments";
+
+}
+@model IEnumerable<DisplayAllPayment>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Payments Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Payments</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Payment Type</th>
+                    <th>Registered Date</th>
+                    <th>Registered By</th>
+                    <th>Status</th>
+                    <th>Deleted By</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjectPayment in Model)
+                {
+                    <tr>
+                        <td>@ObjectPayment.PaymentID</td>
+                        <td>@ObjectPayment.PaymentType</td>
+                        <td>@ObjectPayment.RegisteredDate.ToString("dd.MM.yyyy")</td>
+                        <td>@ObjectPayment.RegisteredBy</td>
+                        
+                        @if (@ObjectPayment.Status == 0)
+                        {
+                            <td>Active</td>
+                        }
+                        else
+                        {
+                            <td>Deleted</td>
+                        }
+
+                        <td>@ObjectPayment.DeletedBy</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Set Priority";
+
+}
+@model Dictionary<String, SetOptionPriority>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Options Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Prioritize available Transfer Options below.</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Option ID</th>
+                    <th>Option Type</th>
+                    <th>Option Name</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Created Date</th>
+                    <th>Created By</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjOptions in Model)
+                {
+                    <form method="post" asp-controller="Transfer" asp-action="SaveOptionPriority">
+                    <tr>
+                        <td>@ObjOptions.Value.OptionID</td>
+                        <td>@ObjOptions.Value.OptionType</td>
+                        <td>@ObjOptions.Value.OptionName</td>
+                        <td>@ObjOptions.Value.OptionDescription</td>
+                        <td>
+                            <input name="Priority" value="@ObjOptions.Value.Priority" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        </td>
+                        <td>@ObjOptions.Value.CreatedDate.ToString("d")</td>
+                        <td>@ObjOptions.Value.CreateBy</td>
+                        <td>
+                            <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                        </td>
+                        
+                    </tr>
+
+                    <input name="OptionID" value="@ObjOptions.Value.OptionID" type="hidden" />
+
+                    </form>
+                }
+            </tbody>
+
+        </table>
+        <br />
+
+    </div>
+
+
+
+</body>
+</html>

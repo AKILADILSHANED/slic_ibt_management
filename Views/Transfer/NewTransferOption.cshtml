@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Register Transfer Option";
+
+}
+
+@model NewTransferOption;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+    <div class="MainMessage">
+        <h4>Register Transfer Option</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="SaveNewTransferOption">
+            <h4>Transfer Option Registration:   Please enter details below.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Option Type</label>
+            <input asp-for="OptionType" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Option Name</label>
+            <input asp-for="OptionName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Description</label>
+            <input asp-for="OptionDescription" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Priority</label>
+            <input asp-for="Priority" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>

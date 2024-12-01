@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Display Transfer Method Details";
+
+}
+@model DeleteTransferMethodDetailsDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Transfer Method Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="SaveDeleteTransferMethod">
+            <h4>Method Details: Transfer Method Details for provided Method ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Method ID</th>
+                        <th>Sending Bank Account</th>
+                        <th>Receiving Bank Acconut</th>
+                        <th>Description</th>
+                        <th>Create By</th>
+                        <th>Created On</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.MethodID</td>
+                        <td>@Model.SendingAccount</td>
+                        <td>@Model.ReceivingAccount</td>
+                        <td>@Model.Description</td>
+                        <td>@Model.FirstName</td>
+                        <td>@Model.CreatedOn.ToString("d")</td>
+                        
+                        <td>
+                            <button type="submit" class="btn btn-danger btn-sm"> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <input name="MethodID" value="@Model.MethodID" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+                       
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="DeleteTransferMethod">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

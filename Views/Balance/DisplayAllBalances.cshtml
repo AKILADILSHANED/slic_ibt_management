@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Display Balances";
+
+}
+@model List<DisplayAllBalancesDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Balances Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Balances</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Balance ID</th>
+                    <th>Balance Date</th>
+                    <th>Bank</th>
+                    <th>Account Number</th>
+                    <th>Balance Amount</th>
+                    <th>Outstanding Balance</th>
+                    <th>Status</th>
+                    <th>Enter By</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjectUser in Model)
+                {
+                    <tr>
+                        <td>@ObjectUser.BalanceID</td>
+                        <td>@ObjectUser.BalanceDate.ToString("dd.MM.yyyy")</td>
+                        <td>@ObjectUser.BankName</td>
+                        <td>@ObjectUser.AccountNumber</td>
+                        <td>@ObjectUser.BalanceAmount.ToString("N")</td>
+                        <td>@ObjectUser.OutstandingBalance.ToString("N")</td>
+                        @if (@ObjectUser.Status == 0)
+                        {
+                            <td>Active</td>
+                        }
+                        else
+                        {
+                            <td>Deleted</td>
+                        }
+
+                        <td>@ObjectUser.FirstName</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <br />
+        <a asp-controller="Balance" asp-action="DisplayBalances">
+            <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+        </a>
+    </div>
+
+
+
+</body>
+</html>

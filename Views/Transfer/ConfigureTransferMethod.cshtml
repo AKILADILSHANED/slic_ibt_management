@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Configure Transfer Method";
+
+}
+@model TransferOptionsWithBankAccounts;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Configure Transfer Method</h4>
+    </div>
+
+    <div class="main_form">
+        
+        <form method="POST" asp-controller="Transfer" asp-action="ConfigurationDetails">
+            <h4>New Configuration:   Please set up following details.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Select Sending Bank Account</label>
+            <select asp-for="@Model.SendingAccountID" class="form-select form-select-sm" aria-label="Small select example">
+                
+                @foreach (var AccountList in Model.BankAccountList)
+                {
+                    <option value="@AccountList.Key">@AccountList.Value.AccountNumber</option>
+                }
+
+            </select>
+            
+            <label for="inputPassword5" class="form-label">Select Transfer Option</label>
+            <select asp-for="@Model.OptionID" class="form-select form-select-sm" aria-label="Small select example">
+                
+                @foreach (var OptionList in Model.TransferOptionList)
+                {
+                    <option value="@OptionList.Key">@OptionList.Value.OptionDescription</option>
+                }
+
+            </select>
+           
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+        
+    </div>
+
+
+
+</body>
+</html>
+

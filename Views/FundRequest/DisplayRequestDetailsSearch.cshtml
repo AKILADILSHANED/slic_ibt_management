@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Display Request Details";
+
+}
+@model FundRequestDetailsDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Fund Request Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+
+        <h4>Fund Request Details: Fund Request Details for provided Request ID.</h4>
+
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Request Date</th>
+                    <th>Required Date</th>
+                    <th>Request Amount</th>
+                    <th>Remaining Request Amount</th>
+                    <th>Approval Status</th>
+                    <th>Approved By</th>
+                    <th>Requested By</th>
+                    <th>Reason</th>
+                    <th>Account Number</th>
+                </tr>
+                
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>@Model.RequestID</td>
+                    <td>@Model.RequestDate.ToString("d")</td>
+                    <td>@Model.RequiredDate.ToString("d")</td>
+                    <td>@Model.RequestAmount.ToString("N")</td>
+                    <td>@Model.RemainingRequestAmount.ToString("N")</td>
+                    <td>@Model.IsApproved</td>
+                    <td>@Model.ApprovedBy</td>
+                    <td>@Model.RequestBy</td>
+                    <td>@Model.RequestReason</td>
+                    <td>@Model.AccountNumber</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+            <br />
+            <a asp-controller="FundRequest" asp-action="SearchRequest">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+       
+
+    </div>
+
+
+</body>
+</html>
+

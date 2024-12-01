@@ -1,0 +1,359 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SLICGL_IBT_Management
+build_property.RootNamespace = SLICGL_IBT_Management
+build_property.ProjectDir = C:\Users\Akila\source\repos\SLICGL_IBT_Management\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Akila\source\repos\SLICGL_IBT_Management
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/AccountBalanceEnter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxBY2NvdW50QmFsYW5jZUVudGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/BalanceAdjustments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxCYWxhbmNlQWRqdXN0bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/BalanceEnter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxCYWxhbmNlRW50ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DeleteBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEZWxldGVCYWxhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DisplayAdjustmentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEaXNwbGF5QWRqdXN0bWVudERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DisplayAllBalances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEaXNwbGF5QWxsQmFsYW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DisplayBalances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEaXNwbGF5QmFsYW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DisplayDeleteBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEaXNwbGF5RGVsZXRlQmFsYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/DisplayEditBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxEaXNwbGF5RWRpdEJhbGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Balance/EditBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxFZGl0QmFsYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/AccountDetailsForRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcQWNjb3VudERldGFpbHNGb3JSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/DeleteAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcRGVsZXRlQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/DisplayAccountDetailsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcRGlzcGxheUFjY291bnREZXRhaWxzRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/DisplayAccountDetailsSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcRGlzcGxheUFjY291bnREZXRhaWxzU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/DisplayAccountDetailsUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcRGlzcGxheUFjY291bnREZXRhaWxzVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/DisplayAllAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcRGlzcGxheUFsbEFjY291bnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/SearchAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcU2VhcmNoQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/BankAccount/UpdateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcVXBkYXRlQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/DashBoard/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaEJvYXJkXEhvbWVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/ApproveRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcQXBwcm92ZVJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/ApproveRequestsReverse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcQXBwcm92ZVJlcXVlc3RzUmV2ZXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DeleteRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGVsZXRlUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DisplayAllRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGlzcGxheUFsbFJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DisplayFundRequestList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGlzcGxheUZ1bmRSZXF1ZXN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DisplayRequestDetailsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGlzcGxheVJlcXVlc3REZXRhaWxzRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DisplayRequestDetailsSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGlzcGxheVJlcXVlc3REZXRhaWxzU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/DisplayRequestDetailsUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcRGlzcGxheVJlcXVlc3REZXRhaWxzVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/NewForecastRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcTmV3Rm9yZWNhc3RSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/NewRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcTmV3UmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/SearchRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcU2VhcmNoUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/FundRequest/UpdateRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZFJlcXVlc3RcVXBkYXRlUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/IBTSheet/DisplaySheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSUJUU2hlZXRcRGlzcGxheVNoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/DeletePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxEZWxldGVQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/DisplayAllPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxEaXNwbGF5QWxsUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/DisplayPaymentDetailsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxEaXNwbGF5UGF5bWVudERldGFpbHNEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/DisplayPaymentDetailsUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxEaXNwbGF5UGF5bWVudERldGFpbHNVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/NewPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxOZXdQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Payment/UpdatePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxVcGRhdGVQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/CreateNewRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xDcmVhdGVOZXdSZXBvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DeleteRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEZWxldGVSZXBvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayAdjustmentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5QWRqdXN0bWVudERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayAllRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5QWxsUmVwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayAllRepoDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5QWxsUmVwb0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayDetailsDeleteRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5RGV0YWlsc0RlbGV0ZVJlcG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayDetailsEditRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5RGV0YWlsc0VkaXRSZXBvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/DisplayDetailsSearchepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xEaXNwbGF5RGV0YWlsc1NlYXJjaGVwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/EditRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xFZGl0UmVwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/RepoAdjustments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xSZXBvQWRqdXN0bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Repo/SearchRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb1xTZWFyY2hSZXBvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/ActiveTransferMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcQWN0aXZlVHJhbnNmZXJNZXRob2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/AutomatedTransfers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcQXV0b21hdGVkVHJhbnNmZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/ConfigurationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcQ29uZmlndXJhdGlvbkRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/ConfigureTransferMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcQ29uZmlndXJlVHJhbnNmZXJNZXRob2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DeActiveTransferMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGVBY3RpdmVUcmFuc2Zlck1ldGhvZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DeleteTransferMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGVsZXRlVHJhbnNmZXJNZXRob2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DeleteTransferMethodDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGVsZXRlVHJhbnNmZXJNZXRob2REZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DislayDetailsRemoveTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzbGF5RGV0YWlsc1JlbW92ZVRyYW5zZmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayAllOptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheUFsbE9wdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayAllTransferMethods.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheUFsbFRyYW5zZmVyTWV0aG9kcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayBulkTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheUJ1bGtUcmFuc2Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayDetailsForUpdateTransferOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheURldGFpbHNGb3JVcGRhdGVUcmFuc2Zlck9wdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayIndividualTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheUluZGl2aWR1YWxUcmFuc2Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/DisplayTransfers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcRGlzcGxheVRyYW5zZmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/NewTransferOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcTmV3VHJhbnNmZXJPcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/RemoveOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcUmVtb3ZlT3B0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/ReverseBulkTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcUmV2ZXJzZUJ1bGtUcmFuc2Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/ReverseIndividualTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcUmV2ZXJzZUluZGl2aWR1YWxUcmFuc2Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/SetOptionPriority.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcU2V0T3B0aW9uUHJpb3JpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/TransfersDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcVHJhbnNmZXJzRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Transfer/UpdateTransferOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJcVXBkYXRlVHJhbnNmZXJPcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/DeleteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/DisplayAllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEaXNwbGF5QWxsVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/DisplayUserDetailsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEaXNwbGF5VXNlckRldGFpbHNEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/DisplayUserDetailsSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEaXNwbGF5VXNlckRldGFpbHNTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/DisplayUserDetailsUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEaXNwbGF5VXNlckRldGFpbHNVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/SearchUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWFyY2hVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/UpdateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/User/UserDetailsForRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGV0YWlsc0ZvclJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Akila/source/repos/SLICGL_IBT_Management/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-voadpzchxr

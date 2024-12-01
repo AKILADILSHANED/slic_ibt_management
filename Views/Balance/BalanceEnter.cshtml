@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "New Balance Enter";
+
+}
+@model Dictionary<String, String>;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Enter Balance</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Balance" asp-action="AccountBalanceEnter">
+            <h4>Please slect a Bank below</h4>
+
+            <br />
+            <label for="inputPassword5" class="form-label">Bank</label>
+            <select name="BankID" class="form-select form-select-sm" aria-label="Small select example">
+                @foreach (var BankList in Model)
+                {
+                    <option value="@BankList.Key">@BankList.Value</option>
+                }
+
+            </select>
+
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>

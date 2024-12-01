@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Details Adjustments";
+
+}
+@model AccountBalanceAdjustmentDetails;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>Adjustment Details</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Adjustment Details for Balance ID @Model.AccountBalanceForAdjustments.BalanceID [@Model.AccountBalanceForAdjustments.AccountNumber] for the date @Model.AccountBalanceForAdjustments.BalanceDate.ToString("yyyy-MM-dd")</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Adjustment Description</th>
+                    <th>Adjusted Amount</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Opening Balance</td>
+                    <td>@Model.AccountBalanceForAdjustments.BalanceAmount.ToString("N")</td>
+                </tr>
+
+                @foreach (AdjustmentDetailsBalancesDTO Object in Model.AllAdjustments.Values)
+                {
+                    <tr>
+                        <td>@Object.Description</td>
+                        <td>@Object.AdjustedAmount.ToString("N")</td>
+                    </tr>
+                }
+                
+                <tr>
+                    <td>Closing Balance</td>
+                    <td>@Model.AccountBalanceForAdjustments.OutstandingBalance.ToString("N")</td>
+                </tr>
+
+            </tbody>
+                        
+        </table>
+        <br />
+        <a asp-controller="Balance" asp-action="BalanceAdjustments">
+            <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+        </a>
+    </div>
+
+
+
+</body>
+</html>

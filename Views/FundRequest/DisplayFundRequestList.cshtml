@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Display Requests";
+
+}
+@model IEnumerable<AllFundRequests>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Fund Requests Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Fund Requests</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Request Date</th>
+                    <th>Required Date</th>
+                    <th>Request Amount</th>
+                    <th>Remaining Request</th>
+                    <th>Requested By</th>
+                    <th>Approval Status</th>
+                    <th>Approved By</th>
+                    <th>Delete Status</th>
+                    <th>Delete By</th>
+                    <th>Reason</th>
+                    <th>Account Number</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var Request in Model)
+                {
+
+                    <tr>
+                        <td>@Request.RequestID</td>
+                        <td>@Request.RequestDate.ToString("d")</td>
+                        <td>@Request.RequiredDate.ToString("d")</td>
+                        <td>@Request.RequestAmount.ToString("N")</td>
+                        <td>@Request.RemainingRequestAmount.ToString("N")</td>
+                        <td>@Request.RequestBy</td>
+                        <td>@Request.IsApproved</td>
+                        <td>@Request.ApprovedBy</td>
+                        <td>@Request.IsDeleted</td>
+                        <td>@Request.DeletedBy</td>
+                        <td>@Request.RequestReason</td>
+                        <td>@Request.AccountNumber</td>
+
+                    </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+        <br>
+
+        <a asp-controller="FundRequest" asp-action="DisplayAllRequests">
+            <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+        </a>
+
+    </div>
+
+
+
+</body>
+</html>

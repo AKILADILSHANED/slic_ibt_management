@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Update Account";
+
+}
+@model UpdateAccountWithBankListDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+
+    <div class="MainMessage">
+        <h4>Display Account Details for update</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="BankAccount" asp-action="ConfirmUpdate" >
+            <h4>Account Details for provided Account ID.</h4>
+
+            <br />
+            <label for="inputPassword5" class="form-label">Bank</label>
+            <select asp-for="@Model.BankID" class="form-select form-select-sm" aria-label="Small select example">
+                <option value="@Model.BankID" selected>@Model.BankName</option>
+                @foreach (var BankList in Model.BankList)
+                {
+                    <option value="@BankList.Key">@BankList.Value</option>
+                }
+
+            </select>
+
+            <label for="inputPassword5" class="form-label">Account ID</label>
+            <input asp-for="@Model.AccountID" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required readonly>
+
+            <label for="inputPassword5" class="form-label">Account Number</label>
+            <input asp-for="@Model.AccountNumber" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Account Type</label>
+            <select asp-for="@Model.AccountType" class="form-select form-select-sm" aria-label="Small select example">
+                <option value="@Model.AccountType" selected>@Model.AccountType</option>
+                <option value="Current Account">Current Account</option>
+                <option value="Saving Account">Saving Account</option>
+                
+            </select>
+
+            <label for="inputPassword5" class="form-label">Account Branch</label>
+            <input asp-for="@Model.AccountBranch" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+
+            <label for="inputPassword5" class="form-label">Currency</label>
+            <select asp-for="@Model.Currency" class="form-select form-select-sm" aria-label="Small select example">
+                <option value="@Model.Currency" selected>@Model.Currency</option>
+                <option value="LKR">LKR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+
+            </select>
+
+            <label for="inputPassword5" class="form-label">General Ledger</label>
+            <input asp-for="@Model.GLCode" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Registered On</label>
+            <input asp-for="@Model.RegisteredDate" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required readonly>
+
+            <label for="inputPassword5" class="form-label">Registered By</label>
+            <input asp-for="@Model.FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required readonly>
+
+            <input asp-for="@Model.IsDeleted" type="hidden" />
+            <input asp-for="@Model.User_Id" type="hidden" />
+
+            <br />
+            
+                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+            
+            <a asp-controller="BankAccount" asp-action="UpdateAccount">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+
+

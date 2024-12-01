@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Display Transfers";
+
+}
+@model List<DisplayTransfers>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Transfers Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Transfers</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Transfer ID</th>
+                    <th>Transfer Date</th>
+                    <th>From Account</th>
+                    <th>To Account</th>
+                    <th>Transfer Amount</th>
+                    <th>Transfer Option</th>
+                    <th>Approve Status</th>
+                    <th>Approved By</th>
+                    <th>Delete Status</th>
+                    <th>Delete By</th>
+                    <th>Balance</th>
+                    <th>Reason</th>
+                    <th>Initiator</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjecTfr in Model)
+                {
+                    <tr>
+                        <td>@ObjecTfr.TransferId</td>
+                        <td>@ObjecTfr.TransferDate.ToString("dd.MM.yyyy")</td>
+                        <td>@ObjecTfr.FromAccount</td>
+                        <td>@ObjecTfr.ToAccount</td>
+                        <td>@ObjecTfr.TransferAmount.ToString("N")</td>
+                        <td>@ObjecTfr.TransferOption</td>
+                        <td>@ObjecTfr.ApproveStatus</td>
+                        <td>@ObjecTfr.ApprovedBy</td>
+                        <td>@ObjecTfr.DeleteStatus</td>
+                        <td>@ObjecTfr.DeleteBy</td>
+                        <td>@ObjecTfr.Balance</td>
+                        <td>@ObjecTfr.PaymentType</td>
+                        <td>@ObjecTfr.InitiateBy</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <br />
+        <a asp-controller="Transfer" asp-action="TransfersDetails">
+            <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+        </a>
+    </div>
+
+
+
+</body>
+</html>

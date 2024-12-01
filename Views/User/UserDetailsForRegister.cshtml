@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Register User";
+    
+}
+@model RegisterUser;
+
+<html>
+
+    <head>       
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+
+    <body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+    <div class="MainMessage">
+        <h4>Register User</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="User" asp-action="RegisterUser">
+        <h4>User Registration:   Please enter User details below.</h4>
+
+        <br />
+
+        <label for="inputPassword5" class="form-label">First Name</label>
+        <input asp-for="FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">Last Name</label>
+        <input asp-for="LastName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">Email Address</label>
+        <input asp-for="Email" class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">EPF Number</label>
+        <input asp-for="Epf" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">Position</label>
+            <select asp-for="Position" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>- Please select User's current position -</option>
+                <option value="Finance Assistant">Finance Assistant</option>
+                <option value="Insurance Assistant">Insurance Assistant</option>
+                <option value="Executive">Executive</option>
+                <option value="Assistant Manager">Assistant Manager</option>
+                <option value="Manager">Manager</option>
+                <option value="Senior Manager">Senior Manager</option>
+                <option value="Assistant General Manager">Assistant General Manager</option>
+                <option value="Cheif Financial Officer">Cheif Financial Officer</option>
+            </select>
+
+        <label for="inputPassword5" class="form-label">User Name</label>
+        <input asp-for="UserName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input asp-for="Password" class="form-control form-control-sm" type="password" aria-label=".form-control-sm example" required>
+
+        <label for="inputPassword5" class="form-label">Please select User Type below</label>
+        <div class="form-check">
+                <input asp-for="UserCategoryAdmin" class="form-check-input" type="checkbox" id="Administrator">
+                    <label class="form-check-label" for="Administrator">
+                    Administrator
+                </label>
+                <br />
+                <input asp-for="UserCategoryInitiator" class="form-check-input" type="checkbox" id="Initiator">
+                <label class="form-check-label" for="Initiator">
+                    Initiator
+                </label>
+                <br />
+                <input asp-for="UserCategorySupervisor" class="form-check-input" type="checkbox" id="Supervisor">
+                <label class="form-check-label" for="Supervisor">
+                    Supervisor
+                </label>
+                <br />
+                <input asp-for="UserCategoryApprover" class="form-check-input" type="checkbox" id="Approver">
+                <label class="form-check-label" for="Approver">
+                    Approver
+                </label>
+        </div>
+
+
+
+
+        <br />
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-controller="" asp-action="">
+            <button type="button" class="btn btn-secondary"> Exit</button>
+        </a>
+
+
+        </form>
+
+    </div>
+
+
+
+    </body>
+</html>

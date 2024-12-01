@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Register Bank Account";
+
+}
+@model RegisterBankAccount;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+    <div class="MainMessage">
+        <h4>Bank Account Registration</h4>
+    </div>
+       
+    
+    <div class="main_form">
+
+        <form method="POST" asp-controller="BankAccount" asp-action="RegisterAccount">
+            <h4>Please enter Bank Account details below</h4>
+                
+
+            <br />
+            <label for="inputPassword5" class="form-label">Bank</label>
+            <select asp-for="BankID" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>- Please select a bank -</option>
+                @foreach (var BankList in Model.BankList)
+                {
+                    <option value="@BankList.Key">@BankList.Value</option>
+                }
+                
+            </select>
+            
+            <label for="inputPassword5" class="form-label">Account Number</label>
+            <input asp-for="AccountNumber" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Account Type</label>
+            <select asp-for="AccountType" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>- Please select an Account Type-</option>
+                <option value="Current Account">Current Account</option>
+                <option value="Saving Account">Saving Account</option>
+            </select>
+
+            <label for="inputPassword5" class="form-label">Account Branch</label>
+            <input asp-for="AccountBranch" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+
+            <label for="inputPassword5" class="form-label">Account Currency</label>
+            <select asp-for="Currency" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>- Please select Account Currency -</option>
+                <option value="LKR">LKR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+            </select>
+
+            <label for="inputPassword5" class="form-label">GL Code</label>
+            <input asp-for="GLCode" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                        
+            <br />
+            <button type="submit" class="btn btn-primary">Register</button>
+
+            <a asp-controller="DashBoard" asp-action="HomePage">
+                <button type="button" class="btn btn-secondary">Exit</button>
+            </a>
+                        
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>

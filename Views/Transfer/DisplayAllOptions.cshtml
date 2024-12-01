@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Display Transfer Options";
+
+}
+@model List<DisplayAllOptionsDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Options Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Transfer Options</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Option ID</th>
+                    <th>Option Type</th>
+                    <th>Option Name</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Created Date</th>
+                    <th>Created By</th>
+                    <th>Status</th>
+                    <th>Deleted By</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjOptions in Model)
+                {
+                    <tr>
+                        <td>@ObjOptions.OptionID</td>
+                        <td>@ObjOptions.OptionType</td>
+                        <td>@ObjOptions.OptionName</td>
+                        <td>@ObjOptions.OptionDescription</td>
+                        <td>@ObjOptions.Priority</td>
+                        <td>@ObjOptions.CreatedDate.ToString("d")</td>
+                        <td>@ObjOptions.CreateBy</td>
+                        <td>@ObjOptions.Status</td>
+                        <td>@ObjOptions.DeletedBy</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <br />
+        
+    </div>
+
+
+
+</body>
+</html>

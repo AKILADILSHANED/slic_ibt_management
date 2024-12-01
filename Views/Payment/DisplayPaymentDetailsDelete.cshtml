@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Delete Payment";
+
+}
+@model DeletePaymentDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Delete Payment Details</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Payment" asp-action="ConfirmPaymentDelete">
+            <h4>Payment Details for provided Payment ID</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Payment ID</label>
+            <input asp-for="PaymentID" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <label for="inputPassword5" class="form-label">Payment Type</label>
+            <input asp-for="PaymentType" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <br />
+            <input asp-for="DeletedBy" type="hidden" />
+
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+
+            <a asp-controller="Payment" asp-action="DeletePayment">
+                <button type="button" class="btn btn-secondary btn-sm">Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

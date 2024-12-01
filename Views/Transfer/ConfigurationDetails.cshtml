@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Account Configuration";
+
+}
+@model ConfigurationDetails;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Set-up Transfer Methods</h4>
+    </div>
+
+
+    <div class="main_form">
+                
+            <h4>Transfer Methods: Configure Transfer Methods below.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Sending Bank Account</th>
+                        <th>Receiving Bank Account</th>
+                        <th>Transfer Option</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var RecevingAccount in Model.ReceivingAccountList)
+                    {
+                        <form method="POST" asp-controller="Transfer" asp-action="SaveTransferMethod">
+                        <tr>
+                            
+                            <td>@Model.SendingAccountNumber</td>
+                            <td>@RecevingAccount.Value</td>
+                            <td>@Model.OptionDescription</td>
+                            <td>
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                            </td>
+                            
+                        </tr>
+
+                        <!--Following details are not display for the User interface-->
+
+                        <input name="SendAccountID" value="@Model.SendingAccountID" type="hidden"/>
+                        <input name="ReceiveAccountID" value="@RecevingAccount.Key" type="hidden" />
+                        <input name="OptionID" value="@Model.OptionID" type="hidden" />
+
+                        </form>
+                    }
+
+                </tbody>
+
+            </table>
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="ConfigureTransferMethod">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+
+    </div>
+
+
+</body>
+</html>
+

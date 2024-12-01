@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Search Account";
+
+}
+@model SearchAccountDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+    <br />
+
+    <div class="MainMessage">
+        <h4>Display Account Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST">
+            <h4>Account Details for provided Account ID.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Account Number</label>
+            <input asp-for="@Model.AccountNumber" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Account Type</label>
+            <input asp-for="@Model.AccountType" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+            
+            <label for="inputPassword5" class="form-label">Account Branch</label>
+            <input asp-for="@Model.AccountBranch" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Currency</label>
+            <input asp-for="@Model.Currency" class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">General Ledger</label>
+            <input asp-for="@Model.GLCode" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Bank</label>
+            <input asp-for="@Model.BankName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Registered On</label>
+            <input asp-for="@Model.RegisteredDate" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+             
+            <label for="inputPassword5" class="form-label">Registered By</label>
+            <input asp-for="@Model.FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <br />
+            <a asp-controller="BankAccount" asp-action="SearchAccount">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+

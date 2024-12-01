@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Display Accounts";
+
+}
+@model IEnumerable<DisplayAllAccountsDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Bank Account Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Bank Accounts</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Account ID</th>
+                    <th>Account Number</th>
+                    <th>AccountType</th>
+                    <th>Bank Branch</th>
+                    <th>Currency</th>
+                    <th>General Ledger</th>
+                    <th>Registered On</th>
+                    <th>Status</th>
+                    <th>Bank</th>
+                    <th>Create By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjectAccount in Model)
+                {
+                    <tr>
+                        <td>@ObjectAccount.AccountID</td>
+                        <td>@ObjectAccount.AccountNumber</td>
+                        <td>@ObjectAccount.AccountType</td>
+                        <td>@ObjectAccount.AccountBranch</td>
+                        <td>@ObjectAccount.Currency</td>
+                        <td>@ObjectAccount.GLCode</td>
+                        <td>@ObjectAccount.RegisteredDate.ToString("dd.MM.yyyy")</td>
+
+                        @if (@ObjectAccount.Status == 0)
+                        {
+                            <td>Active</td>
+                        }
+                        else
+                        {
+                            <td>Deleted</td>
+                        }
+
+                        <td>@ObjectAccount.BankName</td>
+                        <td>@ObjectAccount.FirstName</td>
+
+                        
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+</body>
+</html>

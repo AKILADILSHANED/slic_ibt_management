@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Create New Repo";
+
+}
+@model CreateRepo
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Create new Repo</h4>
+    </div>
+
+    <div class="main_form">
+
+        <br />
+
+        <form method="POST" asp-controller="Repo" asp-action="SaveRepoDetails">
+            <h4>Please enter Repo Details below.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">Repo Type</label>
+            <select asp-for="RepoType" class="form-select form-select-sm" aria-label="Small select example">
+                <option value="" selected> - Please select a Repo Type -</option>
+                <option value="Excess Repo">Excess Repo</option>
+                <option value="Investment Repo">Investment Repo</option>
+
+            </select>
+
+            <label for="inputPassword5" class="form-label">Repo Account</label>
+            <select asp-for="AccountID" class="form-select form-select-sm" aria-label="Small select example">
+                <option value="" selected> - Please select a Repo Account -</option>
+                @foreach (var BankAccount in Model.AccountList)
+                {
+                    <option value="@BankAccount.Key">@BankAccount.Value</option>
+                }
+                
+            </select>
+
+            <label for="inputPassword5" class="form-label">Opening Balance</label>
+            <input asp-for="OpeningBalance" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+            
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Search User";
+
+}
+@model SearchUserWithRoles;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display User Details</h4>
+    </div>
+
+   
+    <div class="main_form">
+
+        <form method="POST">
+            <h4>User Details: User Details for provided User ID.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">First Name</label>
+            <input asp-for="@Model.SearchUserDTO.FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Last Name</label>
+            <input asp-for="@Model.SearchUserDTO.LastName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Email Address</label>
+            <input asp-for="@Model.SearchUserDTO.Email" class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">EPF Number</label>
+            <input asp-for="@Model.SearchUserDTO.Epf" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Position</label>
+            <input asp-for="@Model.SearchUserDTO.Position" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+           
+            <label for="inputPassword5" class="form-label">User Assigned Roles</label>
+            <select asp-for="@Model.SearchAssignedRoles" class="form-select" size="3" aria-label="Size 3 select example">
+                @foreach (String roleslist in Model.SearchAssignedRoles.Values)
+                {
+                    <option value="@roleslist">@roleslist</option>
+                }
+               
+            </select>
+
+
+            <label for="inputPassword5" class="form-label">Create on</label>
+            <input asp-for="@Model.SearchUserDTO.Create_Date_Time" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Create By</label>
+            <input asp-for="@Model.SearchUserDTO.Creator" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+                     
+            <br />
+            <a asp-controller="User" asp-action="SearchUser">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
+

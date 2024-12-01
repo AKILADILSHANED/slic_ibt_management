@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Details Adjustments";
+
+}
+@model RepoAccountBalanceAdjustmentDetails;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>Adjustment Details</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Adjustment Details for Repo ID @Model.RepoAccountBalanceForAdjustments.RepoID [@Model.RepoAccountBalanceForAdjustments.AccountNumber] for the date @Model.RepoAccountBalanceForAdjustments.CreatedDate.ToString("yyyy-MM-dd")</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Adjustment Description</th>
+                    <th>Adjusted Amount</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Opening Balance</td>
+                    <td>@Model.RepoAccountBalanceForAdjustments.OpeningBalance.ToString("N")</td>
+                </tr>
+
+                @foreach (RepoAdjustmentDetailsBalancesDTO Object in Model.AllRepoAdjustments.Values)
+                {
+                    <tr>
+                        <td>@Object.Description</td>
+                        <td>@Object.AdjustedAmount.ToString("N")</td>
+                    </tr>
+                }
+
+                <tr>
+                    <td>Closing Balance</td>
+                    <td>@Model.RepoAccountBalanceForAdjustments.ClosedBalance.ToString("N")</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <br />
+        <a asp-controller="Repo" asp-action="RepoAdjustments">
+            <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+        </a>
+    </div>
+
+
+
+</body>
+</html>

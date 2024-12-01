@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Display Transfer Methods";
+
+}
+@model IEnumerable<DisplayAllTransferMethodsDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Transfer Methods</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Transfer Methods</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Method ID</th>
+                    <th>Sending Account </th>
+                    <th>Receiving Account</th>
+                    <th>Description</th>
+                    <th>Created By</th>
+                    <th>Delete Status</th>
+                    <th>Deleted By</th>
+                    <th>Active Status</th>
+                    
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var Methods in Model)
+                {
+
+                    <tr>
+                        <td>@Methods.MethodID</td>
+                        <td>@Methods.SendingAccountNumber</td>
+                        <td>@Methods.ReceivingAccountNumber</td>
+                        <td>@Methods.Description</td>
+                        <td>@Methods.CreatedBy</td>
+                        <td>@Methods.DeleteStatus</td>
+                        <td>@Methods.DeleteBy</td>
+                        <td>@Methods.Status</td>
+                        
+                    </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+        <br>
+
+    </div>
+
+
+
+</body>
+</html>

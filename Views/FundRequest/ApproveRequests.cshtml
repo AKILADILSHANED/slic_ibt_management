@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Approve Requests";
+
+}
+@model IEnumerable<ApproveRequests>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+
+        <h4>Approve Fund Requests</h4>
+
+    </div>
+
+    <div class="main_form">
+
+        <h4>Available Fund Requests to be approved.</h4>
+        <br />
+
+        <h5 class="Available_Request_Approve_Msg">Remaining Fund Requests to be approved: @Model.Count()</h5>
+        
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Request Date</th>
+                    <th>Required Date</th>
+                    <th>Amount</th>
+                    <th>Account Number</th>
+                    <th>Reason</th>
+                    <th>Request By</th>
+                    <th>Action</th>
+                </tr>
+                
+            </thead>
+
+            <tbody>
+                @foreach (var RequestObj in Model)
+                {
+                    <form method="POST" asp-controller="FundRequest" asp-action="SaveApproval">
+
+                    <tr>
+                        <td>@RequestObj.RequestID</td>
+                        <td>@RequestObj.RequestDate.ToString("d")</td>
+                        <td>@RequestObj.RequiredDate.ToString("d")</td>
+                        <td>@RequestObj.RequestAmount.ToString("N")</td>
+                        <td>@RequestObj.AccountNumber</td>
+                        <td>@RequestObj.PaymentType</td>
+                        <td>@RequestObj.FirstName</td>
+
+
+                        <input type="hidden" name="RequestID" value="@RequestObj.RequestID" />
+                        <input type="hidden" name="RequestDate" value="@RequestObj.RequestDate.ToString("o")" />
+                        <input type="hidden" name="RequiredDate" value="@RequestObj.RequiredDate.ToString("o")" />
+                        <input type="hidden" name="RequestAmount" value="@RequestObj.RequestAmount" />
+                        <input type="hidden" name="AccountNumber" value="@RequestObj.AccountNumber" />
+                        <input type="hidden" name="PaymentType" value="@RequestObj.PaymentType" />
+                        <input type="hidden" name="FirstName" value="@RequestObj.FirstName" />
+                        
+                        <td>
+                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                        </td>
+                    </tr>
+
+                    </form>
+                    
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Display Request Details";
+
+}
+@model FundRequestDetailsUpdateDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Fund Request Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="FundRequest" asp-action="SaveUpdateFundRequest">
+            <h4>Fund Request Details: Fund Request Details for provided Request ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Request Date</th>
+                        <th>Required Date</th>
+                        <th>Request Amount</th>
+                        <th>Remaining Fund Request</th>
+                        <th>Update Option</th>
+                        <th>Update Amount</th>
+                        <th>Requested By</th>
+                        <th>Approved Status</th>
+                        <th>Approved By</th>
+                        <th>Reason</th>
+                        <th>Account Number</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.RequestID</td>
+                        <td>@Model.RequestDate.ToString("d")</td>
+                        <td>@Model.RequiredDate.ToString("d")</td>
+                        <td>@Model.RequestAmount.ToString("N")</td>
+                        <td>@Model.RemainingRequestAmount.ToString("N")</td>
+                        <td>
+                            <select name="Option" class="form-select form-select-sm" aria-label="Small select example">
+                                <option value="+">Increase Request</option>
+                                <option value="-">Decrease Request</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input name="UpdateValue" value="0.00" />
+                        </td>
+                        <td>@Model.RequestBy</td>
+                        <td>@Model.IsApproved</td>
+                        <td>@Model.ApprovedBy</td>
+                        <td>@Model.RequestReason</td>
+                        <td>@Model.AccountNumber</td>
+                        <td>
+                            <button type="submit" class="btn btn-primary btn-sm"> Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <input name="RequestID" value="@Model.RequestID" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" >
+
+            <input name="RequiredDate" value="@Model.RequiredDate" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" >
+
+            <input name="RequestAmount" value="@Model.RequestAmount" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" >
+
+            <input name="RemainingAmount" value="@Model.RemainingRequestAmount" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" >
+
+
+            <br />
+            
+            <a asp-controller="FundRequest" asp-action="UpdateRequest">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "New Balance Enter";
+
+}
+@model Dictionary<String, BalanceEnterAccounts>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Enter Bank Balance</h4>
+    </div>
+
+    <div class="main_form">
+
+        
+            <h4>Please enter Bank Balances below</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Bank</th>
+                        <th>Account Number</th>
+                        <th>AccountType</th>
+                        <th>Currency</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ObjectAccount in Model)
+                    {
+                    <form method="POST" asp-controller="Balance" asp-action="SaveBalance">
+                        <tr>
+                            <td>@ObjectAccount.Value.BankName</td>
+                            <td>@ObjectAccount.Value.AccountNumber</td>
+                            <td>@ObjectAccount.Value.AccountType</td>
+                            <td>@ObjectAccount.Value.Currency</td>
+
+                            <td>
+                                <input name="Balance" type="text" value="0.00"/>
+                            </td>
+                            <!--Following values will be passed to the relevant action, but not displayed in the
+                            interface for User.
+                            -->
+                            
+                            <input name="AccountID" type="hidden" value="@ObjectAccount.Value.AccountID" />
+                            
+
+                            <td>
+                                <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                            </td>
+
+                        </tr>
+
+                    </form>
+                    }
+                </tbody>
+
+            </table>
+                
+            <br />
+        <a asp-controller="Balance" asp-action="BalanceEnter">
+            <button type="button" class="btn btn-secondary">Exit</button>
+        </a>
+
+        
+
+    </div>
+
+
+
+</body>
+</html>
+

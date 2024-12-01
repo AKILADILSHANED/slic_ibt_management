@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Update Balance";
+
+}
+@model UpdateBalance
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Update Account Balance</h4>
+    </div>
+
+    <div class="main_form">
+
+
+        <h4>Please update Balance below</h4>
+
+        <br />
+
+        <table class="table-content">
+            <thead>
+            
+                <tr>
+                    <th>Balance ID</th>
+                    <th>Balance Date</th>
+                    <th>Bank</th>
+                    <th>Account</th>
+                    <th>Existing Balance</th>
+                    <th>Update Option</th>
+                    <th>Update Balance</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <form method="POST" asp-controller="Balance" asp-action="SaveEditBalance">
+                <tr>
+                    <td>@Model.EditBalanceDTO.BalanceID</td>
+                    <td>@Model.EditBalanceDTO.BalanceDate</td>
+                    <td>@Model.EditBalanceDTO.BankName</td>
+                    <td>@Model.EditBalanceDTO.AccountNumber</td>
+                    <td>@Model.EditBalanceDTO.BalanceAmount.ToString("N")</td>
+                    <td>
+                        <select name="Option" class="form-select form-select-sm" aria-label="Small select example">
+                            <option value="+">Increase Balance</option>
+                            <option value="-">Decrease Balance</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input name="UpdateValue" type="text" value="0.00" />
+                    </td>
+                    
+                    <td>
+                        <button type="submit" class="btn btn-success btn-sm">Edit</button>
+                    </td>
+
+                </tr>
+                   <!--Following values will not be displayed to the user -->
+                   
+                <input name="BalanceID" value="@Model.EditBalanceDTO.BalanceID" type="hidden" />
+                <input name="BalanceAmount" value="@Model.EditBalanceDTO.BalanceAmount" type="hidden" />
+                
+                </form> 
+                
+            </tbody>
+
+        </table>
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>
+

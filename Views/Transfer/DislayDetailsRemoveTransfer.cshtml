@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Display Option Details";
+
+}
+@model DislayDetailsRemoveTransferDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Option Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="ConfirmDeleteOption">
+            <h4>Option Details: Option Details for provided Option ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Option ID</th>
+                        <th>Option Type</th>
+                        <th>Option Name</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Created Date</th>
+                        <th>Created By</th>
+                        <th>Action</th>
+                        
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input name="OptionID" value="@Model.OptionID" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+                        </td>
+                        <td>@Model.OptionType</td>
+                        <td>@Model.OptionName</td>
+                        <td>@Model.OptionDescription</td>
+                        <td>@Model.Priority</td>
+                        <td>@Model.CreatedDate</td>
+                        <td>@Model.CreateBy</td>
+                        <td>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+                                  
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="RemoveOption">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

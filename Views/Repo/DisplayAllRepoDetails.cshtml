@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Display Repos";
+
+}
+@model IEnumerable<DisplayAllRepoDetailsDTO>;
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <br />
+    <div class="MainMessage">
+        <h4>All Repo Display</h4>
+    </div>
+
+    <div class="main_form">
+
+        <h4>Listed Available Repos</h4>
+        <br />
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Repo ID</th>
+                    <th>Repo Type</th>
+                    <th>Created Date</th>
+                    <th>Opening Balance</th>
+                    <th>Closing Balance</th>
+                    <th>Status</th>
+                    <th>Delete By</th>
+                    <th>Repo Account Number</th>
+                    <th>Created By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ObjectRepo in Model)
+                {
+                    <tr>
+                        <td>@ObjectRepo.RepoID</td>
+                        <td>@ObjectRepo.RepoType</td>
+                        <td>@ObjectRepo.CreatedDate.ToString("yyyy-MM-dd")</td>
+                        <td>@ObjectRepo.OpeningBalance.ToString("N")</td>
+                        <td>@ObjectRepo.ClosedBalance.ToString("N")</td>
+                        <td>@ObjectRepo.Status</td>
+                        <td>@ObjectRepo.Deleter</td>
+                        <td>@ObjectRepo.AccountNumber</td>
+                        <td>@ObjectRepo.Creator</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <br>
+
+
+
+    </div>
+
+
+
+</body>
+</html>

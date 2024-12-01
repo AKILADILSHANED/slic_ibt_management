@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Delete User";
+
+}
+@model DeleteUserDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Remove User Account</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form asp-controller="User" asp-action="ConfirmUserDelete">
+            <h4>User Details for provided User ID.</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">User ID</label>
+            <input asp-for="User_Id" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <label for="inputPassword5" class="form-label">First Name</label>
+            <input asp-for="FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Last Name</label>
+            <input asp-for="LastName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Email Address</label>
+            <input asp-for="Email" class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">EPF Number</label>
+            <input asp-for="Epf" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Position</label>
+            <input asp-for="@Model.Position" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+           
+            <label for="inputPassword5" class="form-label">Create on</label>
+            <input asp-for="Create_Date_Time" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <label for="inputPassword5" class="form-label">Create By</label>
+            <input asp-for="Creator" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+            
+            <input asp-for="IsDeleted" type="hidden"/>
+            
+
+            <br />
+            <a asp-controller="User" asp-action="ConfirmUserDelete">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </a>
+
+            <a asp-controller="User" asp-action="DeleteUser">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+

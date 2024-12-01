@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Update User";
+
+}
+@model UpdateUserDTO;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Update User Account</h4>
+    </div>
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="User" asp-action="ConfirmUserUpdate">
+            <h4>User Details for provided User ID</h4>
+
+            <br />
+
+            <label for="inputPassword5" class="form-label">User ID</label>
+            <input asp-for="User_Id" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <label for="inputPassword5" class="form-label">First Name</label>
+            <input asp-for="FirstName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Last Name</label>
+            <input asp-for="LastName" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Email Address</label>
+            <input asp-for="Email" class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">EPF Number</label>
+            <input asp-for="Epf" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" required>
+
+            <label for="inputPassword5" class="form-label">Position</label>
+            <select asp-for="Position" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>- Please select User's current position -</option>
+                <option value="Finance Assistant">Finance Assistant</option>
+                <option value="Insurance Assistant">Insurance Assistant</option>
+                <option value="Executive">Executive</option>
+                <option value="Assistant Manager">Assistant Manager</option>
+                <option value="Manager">Manager</option>
+                <option value="Senior Manager">Senior Manager</option>
+                <option value="Assistant General Manager">Assistant General Manager</option>
+                <option value="Cheif Financial Officer">Cheif Financial Officer</option>
+            </select>
+
+            <label for="inputPassword5" class="form-label">Create on</label>
+            <input asp-for="Create_Date_Time" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <label for="inputPassword5" class="form-label">Create By</label>
+            <input asp-for="Creator" class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" readonly>
+
+            <br />
+            <a asp-controller="User" asp-action="DeleteUser">
+                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+            </a>
+
+            <a asp-controller="User" asp-action="UpdateUser">
+                <button type="button" class="btn btn-secondary btn-sm">Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "De-Activate Transfer Method";
+
+}
+
+@model List<DeActiveTransferMethodDTO>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>De-Activate Transfer Method</h4>
+    </div>
+
+
+    <div class="main_form">
+                
+            <h4>Transfer Method Details: De-Active following available Transfer Methods.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Method ID</th>
+                        <th>Sending Bank Account</th>
+                        <th>Receiving Bank Acconut</th>
+                        <th>Description</th>
+                        <th>Create By</th>
+                        <th>Created On</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var NonActiveObj in Model)
+                    {
+                        <form method="POST" asp-controller="Transfer" asp-action="SaveDeActivation">
+                        <tr>
+                            <td>@NonActiveObj.MethodID</td>
+                            <td>@NonActiveObj.SendingAccount</td>
+                            <td>@NonActiveObj.ReceivingAccount</td>
+                            <td>@NonActiveObj.Description</td>
+                            <td>@NonActiveObj.FirstName</td>
+                            <td>@NonActiveObj.CreatedOn.ToString("d")</td>
+
+                            <td>
+                                <button type="submit" class="btn btn-danger btn-sm">DeActivate</button>
+                            </td>
+
+                            <input name="MethodID" value="@NonActiveObj.MethodID" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example">
+
+                        </tr>
+                        </form>
+                    }
+
+                </tbody>
+
+            </table>
+
+            <br />
+       
+    </div>
+
+
+</body>
+</html>
+

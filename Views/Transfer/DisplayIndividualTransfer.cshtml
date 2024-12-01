@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Reverse Transfer";
+
+}
+@model DisplayIndividualTransferForReverse;
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    @if (@TempData["message"] != null)
+    {
+        <div class="alertbox">
+            @TempData["message"]
+        </div>
+
+    }
+
+    <br />
+    <div class="MainMessage">
+        <h4>Display Transfer Details</h4>
+    </div>
+
+
+    <div class="main_form">
+
+        <form method="POST" asp-controller="Transfer" asp-action="SaveDeleteTransfer">
+            <h4>Transfer Details: Transfer Details for provided Transfer ID.</h4>
+
+            <br />
+
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Transfer Date</th>
+                        <th>Transfer ID</th>
+                        <th>From Account</th>
+                        <th>To Account</th>
+                        <th>Transfer Amount</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.TransferDate</td>
+                        <td>@Model.TransferID</td>
+                        <td>@Model.FromAccount</td>
+                        <td>@Model.ToAccount</td>
+                        <td>@Model.TransferAmount.ToString("N")</td>
+
+                        <td>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <input name="TransferID" value="@Model.TransferID" class="form-control form-control-sm" type="hidden" aria-label=".form-control-sm example" required>
+
+            <br />
+
+            <a asp-controller="Transfer" asp-action="ReverseIndividualTransfer">
+                <button type="button" class="btn btn-secondary btn-sm"> Exit</button>
+            </a>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+
